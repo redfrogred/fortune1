@@ -3,6 +3,7 @@ import '../classes/_core.dart'; // loads all the "core" classes
 import '../providers/Controller.dart';
 import 'package:page_transition/page_transition.dart';
 import '../pages/_all.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({Key? key}) : super(key: key);
@@ -14,9 +15,16 @@ class StartPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const Flexible(
-            child: Center(
-              child: Text('StartPage'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.amberAccent[100],
+              child: Center(
+                child: Html(
+                  //data: '<div style="text-align: center;">This is <b>HTML</b></div>',
+                  data: controller.getHtmlFrag('startpage_example')
+                )
+              )
             ),
           ),
           Flexible(
@@ -34,7 +42,7 @@ class StartPage extends StatelessWidget {
                             child: EndPage(),
                             childCurrent: this));
                   },
-                  child: const Text('Go To EndPage')),
+                  child: const Text('Go To EndPage >')),
             ),
           ),
         ],
