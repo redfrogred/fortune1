@@ -3,8 +3,8 @@
 class Config {
 
   // app variables
-  static  String?   appName       = "Clementine Teaches: Affirmations";
-  static  String?   appVersion    = "1.0.1.e";  // the very beginning
+  static  String?   appName       = "Daily Fortune";
+  static  String?   appVersion    = "1.0.1.f";  // the very beginning
     
   // debug variables
   static  bool?     debugFlag     = false;

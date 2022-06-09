@@ -20,10 +20,18 @@ class Html_Frags {
 
      switch( key ) {
        // THESE BE FOR: the main headline (like "Are you ready for Today's Challenge?")
-       case 'startpage_example': {
-        frag = '<div style="text-align: center;"><p style="font-size: 16px;">This is simply an<br /><b style="font-size: 20px;">HTML EXAMPLE!</b></p></div>';
+       case 'startpage_headline': {
+        frag = '<div style="text-align: center;"><p style="font-size: 16px;">Thhis is simply an<br /><b style="font-size: 20px;">HTML EXAMPLE!</b></p></div>';
         break;
        }   
+       case 'startpage_mssg_upper': {
+        frag = '<div style="text-align: center;"><p style="font-size: 16px;">Some upper message</p></div>';
+        break;
+       }   
+       case 'startpage_mssg_lower': {
+        frag = '<div style="text-align: center;"><p style="font-size: 16px;">Some lower message</p></div>';
+        break;
+       }                 
      }
     return frag;
   }
